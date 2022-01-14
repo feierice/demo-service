@@ -1,4 +1,5 @@
-podTemplate(label:'demo-service',serviceAccount:'jenkins',containers:[containerTemplate(name:'gradle',image:'gradle',command:'cat',ttyEnabled:true),
+podTemplate(label:'demo-service',serviceAccount:'jenkins',containers:[
+containerTemplate(name:'gradle',image:'gradle',command:'cat',ttyEnabled:true),
 containerTemplate(name:'docker',image:'docker',command:'cat',ttyEnabled:true),
 containerTemplate(name:'helm',image:'alpine/helm',command:'cat',ttyEnabled:true)],
 volumes:[hostPathVolume(mountPath:'/home/gradle/.gradle',hostPath:'/tmp/jenkins/.gradle'),
